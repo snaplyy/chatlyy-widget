@@ -56,7 +56,7 @@ Create your complete chat system in just 2 minutes - including widget code, agen
 </script>
 
 <!-- Load Widget -->
-<script src="https://cdn.jsdelivr.net/gh/[USER]/n8n-chat-widget@latest/chat-widget.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/oliverhees/configurable-n8n-chat-widget@latest/chat-widget.min.js"></script>
 ```
 
 ### 2. Create n8n Workflow
@@ -247,7 +247,7 @@ colors: {
 
 ### CDN (Recommended)
 ```html
-<script src="https://cdn.jsdelivr.net/gh/[USER]/n8n-chat-widget@latest/chat-widget.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/oliverhees/configurable-n8n-chat-widget@latest/chat-widget.min.js"></script>
 ```
 
 ### Self-hosted
