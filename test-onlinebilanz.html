@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben – OnlineBilanz Widget Test</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            background: #F6FBFF;
+        }
+        h1 { color: #10415D; }
+    </style>
+</head>
+<body>
+    <h1>Ben – OnlineBilanz Widget Test</h1>
+    <p>Klicke auf den Chat-Button unten rechts um den Widget zu testen.</p>
+
+    <script>
+        window.ChatWidgetConfig = {
+            webhook: {
+                url: 'https://automations.hub-onlinesteuern.de/webhook/74981a2b-af5a-4326-9834-1ad5158680c7/chat',
+                route: 'general'
+            },
+            branding: {
+                botName: 'Ben',
+                botStatus: 'Online',
+                botAvatar: 'ben-avatar.jpg',
+                showBotAvatar: true,
+                welcomeTitle: 'Willkommen bei OnlineBilanz 👋',
+                welcomeSubtitle: 'Ihr digitaler Assistent für den Jahresabschluss',
+                welcomeQuestion: 'Wie kann ich Ihnen helfen?',
+                welcomeButtonText: 'Chat starten',
+                inputPlaceholder: 'Ihre Nachricht ...',
+                showFooter: false
+            },
+            initialMessage: {
+                enabled: true,
+                delay: 500,
+                message: 'Herzlich willkommen bei OnlineBilanz! 👋\n\nMein Name ist Ben — ich bin Ihr digitaler Assistent und helfe Ihnen gerne bei allen Fragen rund um Ihren Jahresabschluss.\n\nWie darf ich Ihnen weiterhelfen?\n\n💡 **Tipp:** Sind Sie bereits Kunde? Dann nutzen Sie bitte den Button „Anmelden" oben rechts.'
+            },
+            portalButton: {
+                enabled: true,
+                text: 'Zum Kundenportal',
+                actionText: 'Anmelden',
+                url: 'https://chat.onlinebilanz.de',
+                openInNewTab: true
+            },
+            colors: {
+                primary: '#10415D',
+                primaryDark: '#05162E',
+                background: '#ffffff',
+                backgroundChat: '#F6FBFF',
+                backgroundBotMessage: '#EDFAFF',
+                textPrimary: '#05162E',
+                textSecondary: '#10415D',
+                textOnPrimary: '#EDFAFF',
+                border: '#10415D20',
+                buttonBackground: '#ffffff',
+                buttonBorder: '#10415D',
+                buttonText: '#10415D',
+                buttonHoverBackground: '#10415D',
+                buttonHoverText: '#EDFAFF',
+                formBorder: '#10415D',
+                formTitle: '#05162E'
+            }
+        };
+    </script>
+    <script src="chat-widget.js"></script>
+</body>
+</html>
