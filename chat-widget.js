@@ -94,7 +94,8 @@
         behavior: {
             autoOpen: false,
             autoOpenDelay: 3000,
-            requestTimeout: 30000
+            requestTimeout: 30000,
+            showLauncher: true
         }
     };
 
@@ -956,6 +957,11 @@
     const launcherBtn = widget.querySelector('.chat-launcher');
     const closeBtn = widget.querySelector('.chat-close');
     const startBtn = widget.querySelector('.welcome-start');
+
+    // Hide launcher if configured
+    if (!config.behavior.showLauncher) {
+        launcherBtn.style.display = 'none';
+    }
 
     // ═══════════════════════════════════════════════════════════════
     // HELPER FUNCTIONS
