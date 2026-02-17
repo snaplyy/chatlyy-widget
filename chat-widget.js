@@ -1388,4 +1388,31 @@
         }, config.behavior.autoOpenDelay);
     }
 
+    // ═══════════════════════════════════════════════════════════════
+    // PUBLIC API & DATA-ATTRIBUTE SUPPORT
+    // ═══════════════════════════════════════════════════════════════
+    window.N8nChatWidget = {
+        open: function() {
+            chatWindow.classList.add('open');
+            launcherBtn.classList.add('is-open');
+        },
+        close: function() {
+            chatWindow.classList.remove('open');
+            launcherBtn.classList.remove('is-open');
+        },
+        toggle: function() {
+            toggleChat();
+        }
+    };
+
+    // Allow any element with data-open-chat to open the chat
+    document.addEventListener('click', function(e) {
+        const trigger = e.target.closest('[data-open-chat]');
+        if (trigger) {
+            e.preventDefault();
+            chatWindow.classList.add('open');
+            launcherBtn.classList.add('is-open');
+        }
+    });
+
 })();
